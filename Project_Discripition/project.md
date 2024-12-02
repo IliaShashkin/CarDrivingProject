@@ -17,6 +17,7 @@
 ## Technologies Used
 - **HTML**: To structure the content of the website.
 - **CSS**: For styling and creating an engaging user experience.
+- **Bootstrap**: For making unique and interesting templates.
 
 ---
 
