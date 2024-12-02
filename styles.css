@@ -1,0 +1,190 @@
+﻿/* Reset and basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1b1b1b;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Top Navigation Bar */
+.top-nav {
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+    align-items: center;
+    background-color: #000000;
+    padding: 10px 20px;
+}
+
+.logo {
+    width: 150px;
+}
+
+.top-nav nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1rem;
+}
+
+
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.top-nav nav a:hover {
+    color: #ff4141;
+}
+
+/* Header Section */
+.header {
+    max-width: 2560px;
+    background-color: #0c1014;
+    padding: 40px;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+}
+
+.header-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.source-link {
+    display: inline-block; /* Makes the link a block element for padding */
+    background: linear-gradient(90deg, red, orangered, darkorange);
+    color: white; /* White text */
+    padding: 12px 18px; /* Padding for button effect */
+    margin: 10px;
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* No underline */
+    font-size: 22px;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.source-link:hover {
+    background-color: #2980b9; /* Darker shade on hover */
+    color: black;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.header-content p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Content Section */
+.content {
+    background-color: #1b1b1b;
+    color: #ffffff;
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+.content h2 {
+    font-size: 48px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.content h3 {
+    font-size: 32px;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+.content p {
+    font-size: 22px;
+    color: #b0b0b0;
+    margin-bottom: 10px;
+}
+.content ul {
+    font-size: 22px;
+    color: #b0b0b0;
+}
+.header-image{
+    max-width: 100%;
+    background-size: cover;
+}
+.timeline {
+    border-radius: 15px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.timeline-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.time-btn {
+    padding: 1rem 2rem;
+    border: 2px solid rgba(255, 62, 62, 0.5);
+    border-radius: 5px;
+    background: rgba(25, 25, 25, 0.9);
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    flex: 1;
+    min-width: 150px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.time-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 62, 62, 0.2),
+            transparent
+    );
+    transition: 0.5s;
+}
+
+.time-btn:hover::before {
+    left: 100%;
+}
+
+.time-btn:hover {
+    background: rgba(255, 62, 62, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 62, 62, 0.2);
+}
+
+.time-btn.active {
+    background: #ff3e3e;
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(255, 62, 62, 0.3);
+}
+.btn-text {
+    color: #000;
+    font-size: 1.5em;
+    background-color: rgba(173, 173, 173, 0.72);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
