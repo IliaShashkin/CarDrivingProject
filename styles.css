@@ -139,10 +139,11 @@ body {
     border-radius: 8px;
     display: block;
     transition:1s ;
-    box-shadow:0 0 100px #cdcdcd;
+    box-shadow:0 0 90px #cdcdcd;
+    margin-bottom: 100px;
 }
 .scale:hover {
-    transform: scale(1.01);
+    transform: scale(1.05);
 }
 
 
