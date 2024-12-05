@@ -291,7 +291,6 @@ body {
     p {
         font-family: 'Pathway Gothic One',Helvetica Neue,Helvetica,Arial,sans-serif;
         font-size: 1.728rem;
-        line-height: 0;
     }
 }
 
@@ -304,6 +303,15 @@ body {
     background-position: center center;
     transition: filter 0.5s ease;
     filter: grayscale(100%);
+}
+footer {
+    background-color: #181818;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer p {
+    color: #8c8c8c;
 }
 
 
