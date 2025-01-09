@@ -368,6 +368,7 @@ h1 {
     max-width: 60%;
     height: auto;
     align-self: center;
+    border-radius: 15px;
 }
 
 /* Intro Section */
