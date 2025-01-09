@@ -404,7 +404,7 @@ h1 {
 }
 
 .overlay p{
-
+    font-family: "JetBrains Mono", monospace;
 }
 
 .intro-section h1,
