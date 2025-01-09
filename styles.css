@@ -365,14 +365,8 @@ h1 {
     text-shadow: 1px 1px 1px #333;
 }
 
-
-
-
-
-
-
-
-
-
-
-
+.responsive-image {
+    max-width: 60%;
+    height: auto;
+    align-self: center;
+}
