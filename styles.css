@@ -408,14 +408,23 @@ h1 {
     font-family: "JetBrains Mono", monospace;
 }
 
-.intro-section h1,
-.intro-section p,
+.intro-section h1{
+    font-family: "JetBrains Mono", monospace;
+    font-size: 64px;
+}
+.intro-section p
+{
+    font-family: "JetBrains Mono", monospace;
+    font-size: 32px;
+    max-width: 60%;
+}
 .intro-section {
     position: relative;
     z-index: 1;
 }
 /* Button Style */
 .scroll-btn {
+    margin-top: 60px;
     display: inline-block;
     padding: 12px 25px;
     font-size: 1.1rem;
