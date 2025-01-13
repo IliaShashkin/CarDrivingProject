@@ -476,7 +476,7 @@ table th {
 
 .footer button {
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: #000000;
 
     color: white;
     border: none;
@@ -486,7 +486,7 @@ table th {
 }
 
 .footer button:hover {
-    background-color: #45a049;
+    background-color: #1c1c1c;
 }
 
 .grey-button {
