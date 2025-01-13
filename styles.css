@@ -134,6 +134,12 @@ body {
     color: #888;
     font-size: 14px;
 }
+.caption {
+    font-size: 15px;
+    margin-top: -70px;
+    color: #777;
+    font-style: italic;
+}
 .scale
 {
     border-radius: 8px;
@@ -144,6 +150,7 @@ body {
 }
 .scale:hover {
     transform: scale(1.05);
+    margin-bottom: 120px    ;
 }
 
 
