@@ -48,7 +48,62 @@ However, Audi's offering was hindered by regulatory challenges, leading to its d
 whereas Tesla continues to push advancements through its Autopilot and FSD features.
 
 ## Full Self Drive
-**Todo**
+### Waymo
+
+**Overview**
+
+Waymo, formerly the Google self-driving car project, is a leading developer of autonomous vehicle technology. 
+Their mission is to make it safe and easy for people and things to move around without the need for a human driver.
+
+**Technology**
+
+Waymo's vehicles operate at Level 4 autonomy, meaning no human driver is needed within defined operational conditions. 
+The system utilizes a combination of sensors, including:
+
+- **Cameras**: 29 cameras mounted on the sides and top of the car to provide a 360-degree view.
+
+- **Radar Sensors**: Six radar sensors track larger objects around the vehicle.
+
+- **LiDAR Sensors**: Four LiDAR sensors use laser light to detect objects and measure distances accurately.
+
+**Recent Developments**
+
+Waymo has been expanding its autonomous ride-hailing service, Waymo One, in various cities. 
+However, there have been instances highlighting challenges in the technology. 
+For example, a tech entrepreneur experienced a malfunction where a Waymo vehicle began driving in circles, causing delays and raising concerns about reliability.
+
+### Avride (Formerly Yandex Self-Driving Group)
+
+**Overview**
+
+Avride, previously known as Yandex Self-Driving Group, is a developer of autonomous vehicle technology and delivery robots. 
+Originally part of the Russian company Yandex, the group rebranded as Avride and is now headquartered in Austin, Texas.
+
+**Technology**
+
+Avride's self-driving cars are equipped with a hardware and software system that includes:
+
+- **Cameras**: For visual recognition and navigation.
+
+- **LiDAR**: Light detection and ranging sensors to map the environment.
+
+- **Radar**: To detect larger objects and assist in navigation.
+
+**Recent Developments**
+
+In October 2024, Uber partnered with Avride to offer autonomous vehicle rides and delivery services. 
+This multiyear agreement marks an expansion of Uber's autonomous vehicle partnerships. 
+Austin-based Uber customers will start seeing Uber Eats deliveries from Avride's six-wheeled sidewalk robots, with plans to extend to other cities. 
+In 2025, selected Uber users in Dallas will be able to ride in Avride's autonomous vehicles.
+
+**Testing and Mileage**
+
+As of May 2021, the Yandex Self-Driving Group had driven seven million autonomous miles since its inception in 2017, demonstrating significant progress in the field.
+
+### Conclusion
+
+Both Waymo and Avride are at the forefront of developing full self-driving systems, contributing to the advancement of autonomous vehicle technology. 
+While they have made significant strides, recent incidents highlight the ongoing challenges and the need for continuous improvement to ensure safety and reliability in real-world applications.
 
 ## Sources
 
