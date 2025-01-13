@@ -13,3 +13,11 @@
         }
     });
 });
+// Создаем объект Audio
+const clickSound = new Audio('data/click.mp3');
+
+// Добавляем обработчик события
+document.getElementById('timeline').addEventListener('click', function () {
+    // Воспроизводим звук
+    clickSound.play();
+});
