@@ -87,6 +87,11 @@ body {
     flex-direction: column;
 }
 
+.content ::selection{
+    background-color: #ff4141;
+    color: white;
+}
+
 .content h2 {
     font-size: 48px;
     color: #ffffff;
