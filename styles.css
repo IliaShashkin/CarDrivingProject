@@ -22,23 +22,14 @@ body {
     padding: 10px 20px;
 }
 
-.logo {
-    width: 150px;
-}
 
 .top-nav nav a {
     color: #ffffff;
     text-decoration: none;
     margin: 0 15px;
-    font-size: 1rem;
+    font-size: 24px;
 }
 
-
-
-.social-icons {
-    display: flex;
-    gap: 10px;
-}
 
 .top-nav nav a:hover {
     color: #ff4141;
@@ -465,6 +456,40 @@ table th {
     background: #000000;
     font-weight: bold;
 }
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 10px;
+}
+
+.footer button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+.footer button:hover {
+    background-color: #45a049;
+}
+
+
 
 
 
