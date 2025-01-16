@@ -130,6 +130,12 @@ body {
     color: #888;
     font-size: 14px;
 }
+
+video {
+    border-radius: 8px;
+    box-shadow:0 0 90px #cdcdcd;
+}
+
 .caption {
     font-size: 15px;
     margin-top: -70px;
@@ -239,7 +245,7 @@ body {
     transform: translate3d(0, 0, 0);
     position: relative;
     width: 25%;
-    height: 100vh;
+    height: 70vh;
     min-height: 600px;
     color: #fff;
     overflow: hidden;
