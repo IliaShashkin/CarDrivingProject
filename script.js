@@ -2,22 +2,19 @@
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
-        const targetId = this.getAttribute('href').substring(1); // Get the target ID
+        const targetId = this.getAttribute('href').substring(1);
         const targetElement = document.getElementById(targetId);
 
         if (targetElement) {
             targetElement.scrollIntoView({
-                behavior: 'smooth', // Smooth scrolling
-                block: 'start' // Align to the top of the section
+                behavior: 'smooth',
+                block: 'start'
             });
         }
     });
 });
-// Создаем объект Audio
 const clickSound = new Audio('data/click.mp3');
 
-// Добавляем обработчик события
 document.getElementById('timeline').addEventListener('click', function () {
-    // Воспроизводим звук
     clickSound.play();
 });
