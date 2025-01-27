@@ -18,3 +18,13 @@ const clickSound = new Audio('data/click.mp3');
 document.getElementById('timeline').addEventListener('click', function () {
     clickSound.play();
 });
+
+$(document).ready(function() {
+    $('#navbarDropdown').mouseenter(function() {
+        $('.dropdown-menu').slideToggle(300, "linear");
+    });
+
+    $('.dropdown-menu').mouseleave(function() {
+        $(this).slideToggle(300, "linear");
+    });
+});
