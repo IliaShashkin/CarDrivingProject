@@ -56,7 +56,7 @@ body {
 
 /* Content Section */
 .content {
-    background-color: #1b1b1b;
+    background-color: rgba(27, 27, 27, 0);
     color: #ffffff;
     padding: 40px 20px;
     max-width: 800px;
