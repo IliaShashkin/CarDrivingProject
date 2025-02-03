@@ -63,7 +63,7 @@ body {
     pointer-events: none;
     z-index: -1;
     background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.2), transparent 50%),
-    radial-gradient(circle at top right, rgba(208, 65, 255, 0.17), transparent 50%),
+    radial-gradient(circle at top right, rgba(65, 255, 249, 0.29), transparent 50%),
     radial-gradient(circle at bottom left, rgba(208, 65, 255, 0.17), transparent 50%),
     radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.2), transparent 50%);
 }
