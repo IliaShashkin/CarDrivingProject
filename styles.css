@@ -71,21 +71,24 @@ body {
 }
 
 .source-link {
-    display: inline-block; /* Makes the link a block element for padding */
-    background: linear-gradient(90deg, red, orangered, darkorange);
+    display: block;
+    background: #ff4141;
+    max-width: 200px;
+    box-shadow: 0 5px 15px rgba(255, 65, 65, 0.4);
     color: white; /* White text */
     padding: 12px 18px; /* Padding for button effect */
     margin: 10px;
     border-radius: 5px; /* Rounded corners */
     text-decoration: none; /* No underline */
     font-size: 22px;
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    transition: background-color 0.3s ease;
+
 }
 
 .source-link:hover {
-    background-color: #2980b9; /* Darker shade on hover */
-    color: black;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    background-color: #e74c3c;
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(231, 76, 60, 0.7);
 }
 
 .header-content p {
