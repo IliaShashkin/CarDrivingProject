@@ -81,7 +81,7 @@ body {
     border-radius: 5px; /* Rounded corners */
     text-decoration: none; /* No underline */
     font-size: 22px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 
 }
 
