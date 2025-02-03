@@ -605,15 +605,6 @@ table th {
     background: #dd4343;
 }
 
-.dropdown-item:hover, .dropdown-item:focus {
-    color: #000000;
-    text-decoration: none;
-    background-color: #dd4343;
-}
-
-.dropdown-menu {
-    border: 0px;
-}
 
 @keyframes fadeIn {
     0% {
