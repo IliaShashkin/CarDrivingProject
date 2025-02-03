@@ -116,7 +116,7 @@ body {
     background-color: rgba(27, 27, 27, 0);
     color: #ffffff;
     padding: 40px 20px;
-    max-width: 800px;
+    max-width: 960px;
     margin: 20px auto;
     border-radius: 8px;
     display: flex;
@@ -179,7 +179,7 @@ video {
 
 
 .caption {
-    font-size: 15px;
+    font-size: 22px;
     margin-top: -70px;
     color: #777;
     font-style: italic;
