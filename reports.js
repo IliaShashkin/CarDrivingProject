@@ -11,14 +11,13 @@
         const reportText = document.getElementById("reportText").value.trim();
         if (!reportText) return alert("Report cannot be empty!");
 
-        // Создаём объект репорта
+
         const newReport = {
             timestamp: new Date().toLocaleString(),
             description: reportText,
             status: "Open"
         };
-
-        // Получаем текущие репорты из localStorage
+        //saved in localstorage for now XD
         let reports = JSON.parse(localStorage.getItem("reports")) || [];
         reports.push(newReport);
         localStorage.setItem("reports", JSON.stringify(reports));
