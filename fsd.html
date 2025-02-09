@@ -201,10 +201,19 @@
 </div>
 <footer class="footer">
     <p>&copy; 2024 Self-Drive Systems</p>
-    <p>Found a bug? <button onclick="document.getElementById('reportModal').style.display='block'">Report an issue!</button></p>
+    <p>Found a bug? <button id="reportBtn">Report an issue!</button></p>
+    <div id="reportModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Report an Issue</h2>
+            <textarea id="reportText" placeholder="Describe the issue..."></textarea>
+            <button id="submitReport">Submit</button>
+        </div>
+    </div>
     <div>
         <button onclick="window.location.href='Level3.html';">Previous</button>
     </div>
 </footer>
+<script src="reports.js"></script>
 </body>
 </html>
