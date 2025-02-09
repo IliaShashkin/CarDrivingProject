@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Reports</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="reportPageScript.js" defer></script>
 </head>
 <body>
 <div class="content">
@@ -23,44 +24,5 @@
 </table>
 </div>
 </div>
-<script>
-    async function loadReports() {
-        try {
-            const response = await fetch("/get-reports");
-            const reports = await response.json();
-
-            const table = document.getElementById("reportsContainer");
-            table.innerHTML = "";
-
-            reports.forEach(report => {
-                const tr = document.createElement("tr");
-                tr.innerHTML = `
-                        <td>${report.timestamp}</td>
-                        <td>${report.text}</td>
-                        <td>${report.status}</td>
-                        <td>
-                            ${report.status === "Open" ? `<button onclick="closeReport(${report.id})">Close</button>` : "Closed"}
-                        </td>
-                    `;
-                table.appendChild(tr);
-            });
-        } catch (error) {
-            console.error("Error loading reports:", error);
-        }
-    }
-
-    async function closeReport(id) {
-        await fetch("/close-report", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ id })
-        });
-
-        loadReports();
-    }
-
-    loadReports();
-</script>
-
 </body>
 </html>
