@@ -109,3 +109,94 @@ While they have made significant strides, recent incidents highlight the ongoing
 
 - [Tesla-Autopilot]("https://www.tesla.com/support/autopilot")
 - [Audi Traffic Jam Pilot]("https://magazine.audi.com.au/article/audi-ai-traffic-jam-pilot")
+
+## Questions
+
+#### 1) What is the primary function of Adaptive Cruise Control (ACC)?
+
+1. To maintain a constant speed regardless of traffic
+2. To alert the driver when the fuel level is low
+3. To automatically adjust the vehicle's speed based on traffic conditions 
+4. To enable hands-free steering on all roads
+
+Answer: 3 
+
+Adaptive Cruise Control (ACC) is an advanced driver-assistance system that maintains a safe following distance between your vehicle and the one ahead. Unlike traditional cruise control, which maintains a constant speed, ACC automatically adjusts your speed based on traffic conditions
+
+#### 2) Which components are essential for ACC to function properly?
+
+1. Airbags and traction control
+2. Radar sensors, cameras, and onboard computers
+3. GPS and satellite communication
+4. Manual braking system
+
+Answer: 2
+
+ACC uses these components to create a live map of your surroundings and
+adjusts the speed necessary 
+
+#### 3) What happens when the vehicle ahead of a car using ACC suddenly stops?
+
+1. ACC automatically applies emergency braking if necessary
+2. ACC disables itself and requires manual braking
+3. The vehicle accelerates to maintain its preset speed
+4. ACC alerts the driver but does not intervene
+
+Answer: 1
+
+#### 4) Which driving condition may cause ACC to malfunction?
+
+1.    Dry and clear highways
+2.    Heavy rain or snow blocking the sensors
+3.    City roads with clear lane markings
+4.    Driving during the daytime
+
+Answer: 2
+
+#### **5) What is one major advantage of ACC?**
+1. It completely eliminates the need for driver input
+2. It enhances safety and reduces driver fatigue on long trips
+3. It allows fully autonomous driving in urban areas
+4. It automatically avoids all road hazards
+
+**Answer**: **2**  
+
+#### **6) What hardware components does Tesla Autopilot 2.0 use for its driver-assistance system?**
+1. GPS and satellite navigation only
+2. 8 cameras, radar, and 12 ultrasonic sensors
+3. A single front-facing camera and basic radar
+4. Infrared sensors and LiDAR
+
+**Answer**: **2**
+
+#### **7) Which of the following is NOT a key feature of Tesla Autopilot 2.0?**
+1. Adaptive Cruise Control
+2. Fully autonomous driving with no driver input required
+3. Automatic Emergency Braking
+4. Summon feature to move the car remotely
+
+**Answer**: **2**
+
+#### **8) What is a major limitation of Tesla Autopilot 2.0?**
+1. It does not require driver attention at all
+2. It struggles with complex road conditions like poor lane markings
+3. It lacks adaptive cruise control integration
+4. It does not receive over-the-air software updates
+
+**Answer**: **2**
+
+#### **9) How does Level 2 Lane Keep Assist (LKA) differ from Tesla Autopilot 2.0?**
+1. LKA typically uses fewer cameras and less advanced hardware
+2. LKA provides fully autonomous driving without driver supervision
+3. Tesla Autopilot does not have lane-centering features
+4. LKA integrates machine learning and over-the-air updates like Tesla
+
+**Answer**: **1**
+
+#### **10) What is one major advantage Tesla Autopilot 2.0 has over Level 2 LKA?**
+1. It eliminates the need for human drivers
+2. It has more advanced machine learning and continuous software updates
+3. It does not require radar or cameras to function
+4. It only works on highways and cannot adapt to city driving
+
+**Answer**: **2**  
