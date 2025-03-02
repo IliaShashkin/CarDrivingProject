@@ -121,6 +121,8 @@ While they have made significant strides, recent incidents highlight the ongoing
 
 Answer: 3 
 
+Adaptive Cruise Control (ACC) is an advanced driver-assistance system that maintains a safe following distance between your vehicle and the one ahead. Unlike traditional cruise control, which maintains a constant speed, ACC automatically adjusts your speed based on traffic conditions
+
 #### 2) Which components are essential for ACC to function properly?
 
 1. Airbags and traction control
@@ -129,6 +131,9 @@ Answer: 3
 4. Manual braking system
 
 Answer: 2
+
+ACC uses these components to create a live map of your surroundings and
+adjusts the speed necessary 
 
 #### 3) What happens when the vehicle ahead of a car using ACC suddenly stops?
 
