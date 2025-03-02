@@ -1,0 +1,247 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1b1b1b;
+    color: #a8a7a7;
+    line-height: 1.6;
+}
+
+.quiz-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    background-color: #131313;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Question Section (Left Side) */
+.question-section {
+    flex: 1;
+    padding: 30px;
+    background-color: #131313;
+}
+
+.question-section h1 {
+    color: #ff4141;
+    margin-bottom: 20px;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+}
+
+.question-image {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 250px;
+}
+
+.question-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.question-text p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.question-description {
+    font-size: 16px;
+    color: #a8a7a7;
+    font-style: italic;
+}
+
+/* Answers Section (Right Side) */
+.answers-section {
+    flex: 1;
+    padding: 30px;
+    background-color: #131313;
+}
+
+.answers-section h2 {
+    color: #ff4141;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.answers-list {
+    margin-bottom: 30px;
+}
+
+.answer-option {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.answer-option:hover {
+    background-color: #454545;
+}
+
+.answer-option input[type="radio"] {
+    margin-right: 10px;
+}
+
+.answer-option label {
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#submit-btn, #next-btn, #restart-btn {
+    flex: 1;
+    padding: 15px;
+    background-color: #ff4141;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submit-btn:hover, #next-btn:hover, #restart-btn:hover {
+    background-color: #630101;
+}
+
+#submit-btn:disabled, #next-btn:disabled {
+    background-color: #fa8282;
+    cursor: not-allowed;
+}
+
+#next-btn {
+    background-color: #27ae60;
+}
+
+#next-btn:hover {
+    background-color: #219653;
+}
+
+#restart-btn {
+    background-color: #e74c3c;
+    margin-top: 15px;
+}
+
+#restart-btn:hover {
+    background-color: #c0392b;
+}
+
+#answer-feedback {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #303030;
+}
+
+#answer-feedback h3 {
+    color: #ff4141;
+    margin-bottom: 15px;
+}
+
+#quiz-results {
+    text-align: center;
+    padding: 20px;
+    background-color: #303030;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+#quiz-results h2 {
+    color: #ff4141;
+    margin-bottom: 15px;
+}
+
+#quiz-results p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#score, #max-score {
+    font-weight: bold;
+    font-size: 24px;
+    color: #ff4141;
+}
+
+.hidden {
+    display: none;
+}
+
+.correct {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.incorrect {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .quiz-container {
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    .question-section, .answers-section {
+        padding: 20px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+}
+
+.glow-overlay-quiz {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -1;
+    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.2), transparent 50%),
+    radial-gradient(circle at top right, rgba(255, 65, 65, 0.22), transparent 50%),
+    radial-gradient(circle at bottom left, rgba(255, 65, 65, 0.23), transparent 50%),
+    radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.2), transparent 50%);
+}
