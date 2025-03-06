@@ -144,6 +144,8 @@ adjusts the speed necessary
 
 Answer: 1
 
+ACC controls speed, this includes acceleration and ...
+
 #### 4) Which driving condition may cause ACC to malfunction?
 
 1.    Dry and clear highways
@@ -153,6 +155,9 @@ Answer: 1
 
 Answer: 2
 
+ACC Radars can not work in dense conditions.
+What dense conditions can you think of?
+
 #### **5) What is one major advantage of ACC?**
 1. It completely eliminates the need for driver input
 2. It enhances safety and reduces driver fatigue on long trips
@@ -160,6 +165,8 @@ Answer: 2
 4. It automatically avoids all road hazards
 
 **Answer**: **2**  
+
+How does ACC help the driver?
 
 #### **6) What hardware components does Tesla Autopilot 2.0 use for its driver-assistance system?**
 1. GPS and satellite navigation only
@@ -169,6 +176,8 @@ Answer: 2
 
 **Answer**: **2**
 
+What **outside** components does a tesla car have?
+
 #### **7) Which of the following is NOT a key feature of Tesla Autopilot 2.0?**
 1. Adaptive Cruise Control
 2. Fully autonomous driving with no driver input required
@@ -176,6 +185,9 @@ Answer: 2
 4. Summon feature to move the car remotely
 
 **Answer**: **2**
+
+Autopilot 2.0 improved sensor and camera technology, but not all futuristic driving features were fully operational
+. Which operation sounds futuristic?
 
 #### **8) What is a major limitation of Tesla Autopilot 2.0?**
 1. It does not require driver attention at all
@@ -185,6 +197,9 @@ Answer: 2
 
 **Answer**: **2**
 
+Tesla Autopilot 2.0 often had trouble within cities and mountains.
+What could the reason be?
+
 #### **9) How does Level 2 Lane Keep Assist (LKA) differ from Tesla Autopilot 2.0?**
 1. LKA typically uses fewer cameras and less advanced hardware
 2. LKA provides fully autonomous driving without driver supervision
@@ -193,6 +208,8 @@ Answer: 2
 
 **Answer**: **1**
 
+Think on how Tesla Autopilot 2.0 is able to **see** your surroundings.
+
 #### **10) What is one major advantage Tesla Autopilot 2.0 has over Level 2 LKA?**
 1. It eliminates the need for human drivers
 2. It has more advanced machine learning and continuous software updates
@@ -200,3 +217,36 @@ Answer: 2
 4. It only works on highways and cannot adapt to city driving
 
 **Answer**: **2**  
+
+Tesla Autopilot had some self-learning capabilities. What could that mean?
+
+#### **11) What is the key feature in Audi's Traffic Jam Pilot?**
+
+1. LiDAR scanners
+2. Embedded cameras 
+3. Parking Sensors
+4. None of the above
+
+**Answer**: 1
+
+What tech can make a 3D map of a location?
+
+#### 12) What distinguishes Audi's Traffic Jam Pilot from Tesla's Autopilot in terms of autonomy level and driver supervision?
+
+1) Audi's system is Level 2 and requires constant driver attention, while Tesla's is Level 3 with hands-off capability.
+2) Audi's system is Level 3 allowing hands-off driving in slow traffic, whereas Tesla's is Level 2 requiring continuous driver supervision.
+3) Both systems operate at Level 3 with no need for driver intervention.
+4) Tesla's system uses LiDAR for mapping, while Audi relies only on cameras.
+
+**Answer:** 2
+
+**Explanation:**
+
+The main difference between Audi's Traffic Jam Pilot and Tesla's Autopilot
+is that Audi's Traffic Jam Pilot allows...
+
+https://www.youtube.com/shorts/G59pxnDXlto
+
+https://www.youtube.com/watch?v=vEx5zazFLZ8
+
+https://www.youtube.com/watch?v=KHg8rGSAdvM
