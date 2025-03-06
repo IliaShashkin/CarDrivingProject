@@ -44,18 +44,32 @@
             videoExplanation: "data/emergencystop.mp4"
         },
         {
-            question: "What happens when the vehicle ahead of a car using ACC suddenly stops?",
-            description: "ACC is designed to handle traffic changes, but how does it react in emergency situations?",
-            image: "https://i-a.d-cd.net/RJl4GOjT5MjnZ2swlzw4_eyUCiw-1920.jpg",
+            question: "Which driving condition may cause ACC to malfunction?",
+            description: "ACC relies on sensors to function, but external conditions can interfere.",
+            image: "data/error.png",
             options: [
-                "ACC automatically applies emergency braking if necessary",
-                "ACC disables itself and requires manual braking",
-                "The vehicle accelerates to maintain its preset speed",
-                "ACC alerts the driver but does not intervene"
+                "Dry and clear highways",
+                "Heavy rain or snow blocking the sensors",
+                "City roads with clear lane markings",
+                "Driving during the daytime"
+            ],
+            correctAnswer: 1,
+            explanation: "Radar and cameras may struggle in poor weather, leading to reduced ACC performance or temporary deactivation.",
+            videoExplanation: "data/heavyRainConditions.mp4"
+        },
+        {
+            question: "What is the key feature in Audi's Traffic Jam Pilot?",
+            description: "",
+            image: "data/error.png",
+            options: [
+                "LiDAR scanners",
+                "Embedded cameras",
+                "Parking Sensors",
+                "None of the above"
             ],
             correctAnswer: 0,
-            explanation: "Most modern ACC systems have automatic emergency braking (AEB), which applies the brakes if a collision is imminent. However, drivers should remain attentive.",
-            videoExplanation: "data/emergencystop.mp4"
+            explanation: "Audi was the first car manufacturer to include a LiDAR system for it's Traffic Jam Pilot.",
+            videoExplanation: "data/heavyRainConditions.mp4"
         }
     ];
 
@@ -213,7 +227,7 @@
             setTimeout(() => {
                 feedbackSection.classList.add('hidden');
                 quizResults.classList.remove('hidden');
-            }, 2000);
+            }, 20000);
         }
     });
 
