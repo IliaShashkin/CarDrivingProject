@@ -1,0 +1,5 @@
+# For the server
+flask
+
+# For the unit tests
+requests

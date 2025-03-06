@@ -1,0 +1,14 @@
+services:
+  leaderboard:
+    build: .
+    container_name: quiz-leaderboard
+    network_mode: "host"
+    volumes:
+      - ./data/:/app/data/
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "healthcheck.py"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s

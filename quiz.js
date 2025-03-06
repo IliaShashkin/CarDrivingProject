@@ -223,6 +223,8 @@
             // Update score display
             scoreDisplay.textContent = score;
 
+
+
             // Show quiz results after a short delay
             setTimeout(() => {
                 feedbackSection.classList.add('hidden');

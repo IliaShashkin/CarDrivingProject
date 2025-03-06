@@ -1,0 +1,245 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <style>
+        :root {
+            --bg-color: #1a1a1a;
+            --text-color: #ffffff;
+            --primary-color: #8a2be2;
+            --hover-color: #9f3fff;
+            --input-bg: #2d2d2d;
+            --success-color: #4CAF50;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .leaderboard {
+            margin: 20px 0;
+        }
+
+        .leaderboard li {
+            padding: 10px;
+            margin: 5px 0;
+            background-color: var(--input-bg);
+            border-radius: 5px;
+            list-style: none;
+        }
+
+        .success-message {
+            color: var(--success-color);
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+            background-color: rgba(76, 175, 80, 0.1);
+            display: none;
+        }
+
+        .score-form {
+                background-color: var(--input-bg);
+                padding: 15px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+            .score-form input {
+                background-color: var(--bg-color);
+                border: 1px solid var(--primary-color);
+                color: var(--text-color);
+                padding: 8px;
+                margin: 5px;
+                border-radius: 4px;
+            }
+            .score-form button {
+                background-color: var(--primary-color);
+                color: var(--text-color);
+                border: none;
+                padding: 8px 15px;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            .score-form button:hover {
+                background-color: var(--hover-color);
+            }
+        </style>
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Memory Game Leaderboard</h1>
+
+        <div id="auth-form" class="score-form">
+            <input type="password" id="password" placeholder="Enter password">
+            <button onclick="authenticate()">Login</button>
+        </div>
+        <div id="score-form" class="score-form" style="display: none;">
+            <input type="text" id="name" placeholder="Enter name" required>
+            <input type="number" id="score" placeholder="Enter score" required>
+            <button onclick="submitScore()">Submit Score</button>
+        </div>
+
+        <div id="leaderboard" class="leaderboard">
+            <!-- Injected leaderboard entries here -->
+        </div>
+        <div class="success-message" id="success-message">
+            Score submitted successfully!
+        </div>
+    </div>
+
+    <script>
+        async function authenticate() {
+            const password = document.getElementById('password').value;
+            
+            const formData = new FormData();
+            formData.append('password', password);
+
+            try {
+                const response = await fetch('/authenticate', {
+                    method: 'POST',
+                    body: formData
+                });
+                const data = await response.json();
+                
+                if (data.status === 'success') {
+                    document.getElementById('auth-form').style.display = 'none';
+                    document.getElementById('score-form').style.display = 'block';
+                    loadLeaderboard();
+                } else {
+                    alert('Invalid password');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Authentication failed');
+            }
+        }
+
+        function submitScore() {
+            const name = document.getElementById('name').value;
+            const score = parseInt(document.getElementById('score').value);
+            
+            if (!name || !score) {
+                alert('Please enter both name and score');
+                return;
+            }
+
+            fetch('/leaderboard', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name, score })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    const successMessage = document.getElementById('success-message');
+                    successMessage.style.display = 'block';
+                    successMessage.textContent = 'Score submitted successfully!';
+                    setTimeout(() => {
+                        successMessage.style.display = 'none';
+                    }, 3000);
+                    loadLeaderboard();
+                    document.getElementById('name').value = '';
+                    document.getElementById('score').value = '';
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        }
+
+        function deleteScore(name) {
+            fetch('/leaderboard', {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name: name })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    loadLeaderboard();
+                    const successMessage = document.getElementById('success-message');
+                    successMessage.style.display = 'block';
+                    successMessage.textContent = 'Score deleted successfully!';
+                    setTimeout(() => {
+                        successMessage.style.display = 'none';
+                    }, 3000);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        }
+
+        function formatLeaderboardEntry(entry) {
+            const match = entry.match(/Score: (\d+)\s+Name:\s+(.+)/);
+            if (match) {
+                const [_, score, name] = match;
+                return `<li>
+                    Score: ${score} Name: ${name}
+                    <button onclick="deleteScore('${name}')" 
+                        style="float: right; 
+                        background-color: #ff4444; 
+                        color: white; 
+                        border: none;
+                        border-radius: 4px;
+                        padding: 4px 8px;
+                        cursor: pointer;">
+                        Delete
+                    </button>
+                </li>`;
+            }
+            return `<li>${entry}</li>`;
+        }
+
+        function loadLeaderboard() {
+            fetch('/leaderboard')
+                .then(response => response.text())
+                .then(html => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(html, 'text/html');
+                    const items = Array.from(doc.querySelectorAll('li')).map(li => li.textContent);
+                    
+                    const formattedHtml = '<ul>' + 
+                        items.map(entry => formatLeaderboardEntry(entry)).join('') + 
+                        '</ul>';
+                    
+                    document.getElementById('leaderboard').innerHTML = formattedHtml;
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            if (document.getElementById('score-form').style.display !== 'none') {
+                loadLeaderboard();
+            }
+            
+            setInterval(function() {
+                if (document.getElementById('score-form').style.display !== 'none') {
+                    loadLeaderboard();
+                }
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
