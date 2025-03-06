@@ -6,10 +6,10 @@
 
     <style>
         :root {
-            --bg-color: #1a1a1a;
+            --bg-color: #1b1b1b;
             --text-color: #ffffff;
-            --primary-color: #8a2be2;
-            --hover-color: #9f3fff;
+            --primary-color: #ff4141;
+            --hover-color: #f88686;
             --input-bg: #2d2d2d;
             --success-color: #4CAF50;
         }
@@ -88,70 +88,70 @@
 
 </head>
 <body>
-    <div class="container">
-        <h1>Memory Game Leaderboard</h1>
+<div class="container">
+    <h1>Quiz Leaderboard</h1>
 
-        <div id="auth-form" class="score-form">
-            <input type="password" id="password" placeholder="Enter password">
-            <button onclick="authenticate()">Login</button>
-        </div>
-        <div id="score-form" class="score-form" style="display: none;">
-            <input type="text" id="name" placeholder="Enter name" required>
-            <input type="number" id="score" placeholder="Enter score" required>
-            <button onclick="submitScore()">Submit Score</button>
-        </div>
-
-        <div id="leaderboard" class="leaderboard">
-            <!-- Injected leaderboard entries here -->
-        </div>
-        <div class="success-message" id="success-message">
-            Score submitted successfully!
-        </div>
+    <div id="auth-form" class="score-form">
+        <input type="password" id="password" placeholder="Enter password">
+        <button onclick="authenticate()">Login</button>
+    </div>
+    <div id="score-form" class="score-form" style="display: none;">
+        <input type="text" id="name" placeholder="Enter name" required>
+        <input type="number" id="score" placeholder="Enter score" required>
+        <button onclick="submitScore()">Submit Score</button>
     </div>
 
-    <script>
-        async function authenticate() {
-            const password = document.getElementById('password').value;
-            
-            const formData = new FormData();
-            formData.append('password', password);
+    <div id="leaderboard" class="leaderboard">
+        <!-- Injected leaderboard entries here -->
+    </div>
+    <div class="success-message" id="success-message">
+        Score submitted successfully!
+    </div>
+</div>
 
-            try {
-                const response = await fetch('/authenticate', {
-                    method: 'POST',
-                    body: formData
-                });
-                const data = await response.json();
-                
-                if (data.status === 'success') {
-                    document.getElementById('auth-form').style.display = 'none';
-                    document.getElementById('score-form').style.display = 'block';
-                    loadLeaderboard();
-                } else {
-                    alert('Invalid password');
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                alert('Authentication failed');
+<script>
+    async function authenticate() {
+        const password = document.getElementById('password').value;
+
+        const formData = new FormData();
+        formData.append('password', password);
+
+        try {
+            const response = await fetch('/authenticate', {
+                method: 'POST',
+                body: formData
+            });
+            const data = await response.json();
+
+            if (data.status === 'success') {
+                document.getElementById('auth-form').style.display = 'none';
+                document.getElementById('score-form').style.display = 'block';
+                loadLeaderboard();
+            } else {
+                alert('Invalid password');
             }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Authentication failed');
+        }
+    }
+
+    function submitScore() {
+        const name = document.getElementById('name').value;
+        const score = parseInt(document.getElementById('score').value);
+
+        if (!name ) {
+            alert('Please enter both name and score');
+            return;
         }
 
-        function submitScore() {
-            const name = document.getElementById('name').value;
-            const score = parseInt(document.getElementById('score').value);
-            
-            if (!name ) {
-                alert('Please enter both name and score');
-                return;
-            }
-
-            fetch('/leaderboard', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ name, score })
-            })
+        fetch('/leaderboard', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ name, score })
+        })
             .then(response => response.json())
             .then(data => {
                 if (data.status === 'success') {
@@ -167,16 +167,16 @@
                 }
             })
             .catch(error => console.error('Error:', error));
-        }
+    }
 
-        function deleteScore(name) {
-            fetch('/leaderboard', {
-                method: 'DELETE',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ name: name })
-            })
+    function deleteScore(name) {
+        fetch('/leaderboard', {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ name: name })
+        })
             .then(response => response.json())
             .then(data => {
                 if (data.status === 'success') {
@@ -190,57 +190,48 @@
                 }
             })
             .catch(error => console.error('Error:', error));
+    }
+
+    function formatLeaderboardEntry(entry) {
+        return `<li>
+                Score: ${entry.score} Name: ${entry.name}
+                <button onclick="deleteScore('${entry.name}')"
+                    style="float: right;
+                    background-color: #ff4444;
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+                    padding: 4px 8px;
+                    cursor: pointer;">
+                    Delete
+                </button>
+            </li>`;
+    }
+
+    function loadLeaderboard() {
+        fetch('/leaderboard')
+            .then(response => response.json())
+            .then(data => {
+                const formattedHtml = '<ul>' +
+                    data.map(entry => formatLeaderboardEntry(entry)).join('') +
+                    '</ul>';
+
+                document.getElementById('leaderboard').innerHTML = formattedHtml;
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        if (document.getElementById('score-form').style.display !== 'none') {
+            loadLeaderboard();
         }
 
-        function formatLeaderboardEntry(entry) {
-            const match = entry.match(/Score: (\d+)\s+Name:\s+(.+)/);
-            if (match) {
-                const [_, score, name] = match;
-                return `<li>
-                    Score: ${score} Name: ${name}
-                    <button onclick="deleteScore('${name}')" 
-                        style="float: right; 
-                        background-color: #ff4444; 
-                        color: white; 
-                        border: none;
-                        border-radius: 4px;
-                        padding: 4px 8px;
-                        cursor: pointer;">
-                        Delete
-                    </button>
-                </li>`;
-            }
-            return `<li>${entry}</li>`;
-        }
-
-        function loadLeaderboard() {
-            fetch('/leaderboard')
-                .then(response => response.text())
-                .then(html => {
-                    const parser = new DOMParser();
-                    const doc = parser.parseFromString(html, 'text/html');
-                    const items = Array.from(doc.querySelectorAll('li')).map(li => li.textContent);
-                    
-                    const formattedHtml = '<ul>' + 
-                        items.map(entry => formatLeaderboardEntry(entry)).join('') + 
-                        '</ul>';
-                    
-                    document.getElementById('leaderboard').innerHTML = formattedHtml;
-                })
-                .catch(error => console.error('Error:', error));
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
+        setInterval(function() {
             if (document.getElementById('score-form').style.display !== 'none') {
                 loadLeaderboard();
             }
-            
-            setInterval(function() {
-                if (document.getElementById('score-form').style.display !== 'none') {
-                    loadLeaderboard();
-                }
-            }, 5000);
-        });
-    </script>
+        }, 5000);
+    });
+</script>
 </body>
 </html>
