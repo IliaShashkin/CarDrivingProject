@@ -144,6 +144,8 @@ adjusts the speed necessary
 
 Answer: 1
 
+ACC controls speed, this includes acceleration and ...
+
 #### 4) Which driving condition may cause ACC to malfunction?
 
 1.    Dry and clear highways
@@ -153,8 +155,8 @@ Answer: 1
 
 Answer: 2
 
-Heavy rain and snow confuse the radar sensors and may map 
-a false environment.
+ACC Radars can not work in dense conditions.
+What dense conditions can you think of?
 
 #### **5) What is one major advantage of ACC?**
 1. It completely eliminates the need for driver input
@@ -164,9 +166,7 @@ a false environment.
 
 **Answer**: **2**  
 
-As ACC adapts to the speed of the car ahead of it,
-the driver doesn't have to constantly change speed
-and thus reduces fatige.
+How does ACC help the driver?
 
 #### **6) What hardware components does Tesla Autopilot 2.0 use for its driver-assistance system?**
 1. GPS and satellite navigation only
@@ -176,7 +176,7 @@ and thus reduces fatige.
 
 **Answer**: **2**
 
-refer to the diagram on our level 2 website.
+What **outside** components does a tesla car have?
 
 #### **7) Which of the following is NOT a key feature of Tesla Autopilot 2.0?**
 1. Adaptive Cruise Control
@@ -186,8 +186,8 @@ refer to the diagram on our level 2 website.
 
 **Answer**: **2**
 
-That feature was introduced in the latest version of Tesla Autopilot.
-Tesla Autopilot 3.0
+Autopilot 2.0 improved sensor and camera technology, but not all futuristic driving features were fully operational
+. Which operation sounds futuristic?
 
 #### **8) What is a major limitation of Tesla Autopilot 2.0?**
 1. It does not require driver attention at all
@@ -197,9 +197,8 @@ Tesla Autopilot 3.0
 
 **Answer**: **2**
 
-There were coding limitations to the Tesla Autopilot 2.0
-and whenever it encountered difficult road conditions,
-it switched control to the driver.
+Tesla Autopilot 2.0 often had trouble within cities and mountains.
+What could the reason be?
 
 #### **9) How does Level 2 Lane Keep Assist (LKA) differ from Tesla Autopilot 2.0?**
 1. LKA typically uses fewer cameras and less advanced hardware
@@ -209,8 +208,7 @@ it switched control to the driver.
 
 **Answer**: **1**
 
-Tesla Autopilot 2.0 uses the sensors AND camera's on a Tesla to make 
-calculations for speed control and other features.
+Think on how Tesla Autopilot 2.0 is able to **see** your surroundings.
 
 #### **10) What is one major advantage Tesla Autopilot 2.0 has over Level 2 LKA?**
 1. It eliminates the need for human drivers
@@ -220,8 +218,7 @@ calculations for speed control and other features.
 
 **Answer**: **2**  
 
-The DataBase Tesla Autopilot 2.0 uses is constantly updated with new features.
-Making it a very versatile tool.
+Tesla Autopilot had some self-learning capabilities. What could that mean?
 
 #### **11) What is the key feature in Audi's Traffic Jam Pilot?**
 
@@ -232,8 +229,7 @@ Making it a very versatile tool.
 
 **Answer**: 1
 
-Audi was the first car manufacturer to include a LiDAR system 
-for it's Traffic Jam Pilot.
+What tech can make a 3D map of a location?
 
 #### 12) What distinguishes Audi's Traffic Jam Pilot from Tesla's Autopilot in terms of autonomy level and driver supervision?
 
@@ -245,10 +241,9 @@ for it's Traffic Jam Pilot.
 **Answer:** 2
 
 **Explanation:**
-- Audi's Traffic Jam Pilot is a Level 3 system, meaning it can handle driving tasks in specific conditions.
-- It permits hands-off driving in low-speed, congested traffic situations.
-- Tesla’s Autopilot is classified as Level 2, which always requires the driver to supervise.
-- This distinction highlights the difference in driver involvement between the two systems.
+
+The main difference between Audi's Traffic Jam Pilot and Tesla's Autopilot
+is that Audi's Traffic Jam Pilot allows...
 
 https://www.youtube.com/shorts/G59pxnDXlto
 
