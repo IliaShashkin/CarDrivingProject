@@ -43,36 +43,19 @@
 </nav>
 <div class="quiz-container">
   <div class="question-section">
-    <h1>Quiz Question <span id="question-number">1</span>/<span id="total-questions">3</span></h1>
+    <h1>Quiz Question <span id="question-number">1</span>/<span id="total-questions">5</span></h1>
     <div class="question-image">
-      <img id="question-img" src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Question Image">
+      <img id="question-img" src="" alt="Question Image">
     </div>
     <div class="question-text">
-      <p id="question-text">Which color has the longest wavelength in the visible spectrum?</p>
-      <p id="question-description" class="question-description">The visible spectrum is the portion of the electromagnetic spectrum that is visible to the human eye, typically ranging from about 380 to 750 nanometers.</p>
+      <p id="question-text"></p>
+      <p id="question-description" class="question-description"></p>
     </div>
   </div>
 
   <div class="answers-section">
     <h2>Choose Your Answer</h2>
-    <div class="answers-list" id="answers-list">
-      <div class="answer-option">
-        <input type="radio" id="answer1" name="answer" value="0">
-        <label for="answer1">Blue</label>
-      </div>
-      <div class="answer-option">
-        <input type="radio" id="answer2" name="answer" value="1">
-        <label for="answer2">Green</label>
-      </div>
-      <div class="answer-option">
-        <input type="radio" id="answer3" name="answer" value="2">
-        <label for="answer3">Red</label>
-      </div>
-      <div class="answer-option">
-        <input type="radio" id="answer4" name="answer" value="3">
-        <label for="answer4">Yellow</label>
-      </div>
-    </div>
+    <div class="answers-list" id="answers-list"></div>
 
     <div class="button-group">
       <button id="submit-btn">Submit Answer</button>
@@ -86,7 +69,10 @@
       <div id="video-explanation" class="hidden">
         <h4>Video Explanation</h4>
         <div class="video-container">
-          <iframe id="explanation-video" width="560" height="315" src="" title="Explanation Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <video id="explanation-video" controls autoplay >
+            <source src="" type="video/mp4" >
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
     </div>
@@ -94,7 +80,29 @@
     <div id="quiz-results" class="hidden">
       <h2>Quiz Completed!</h2>
       <p>Your score: <span id="score">0</span>/<span id="max-score">0</span></p>
-      <button id="restart-btn">Restart Quiz</button>
+      <div class="save-score-section">
+        <input type="text" id="nickname" placeholder="Enter your nickname" maxlength="20">
+        <button id="save-score-btn">Save Score</button>
+      </div>
+    </div>
+
+    <div id="leaderboard" class="hidden">
+      <h2>Top Scores</h2>
+      <div class="leaderboard-table">
+        <table>
+          <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Nickname</th>
+            <th>Score</th>
+            <th>Date</th>
+          </tr>
+          </thead>
+          <tbody id="leaderboard-body">
+          </tbody>
+        </table>
+      </div>
+      <button id="play-again-btn">Play Again</button>
     </div>
   </div>
 </div>

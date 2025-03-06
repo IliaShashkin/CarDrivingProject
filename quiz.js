@@ -11,7 +11,7 @@
                 "automatically adjusting the vehicle's speed based on traffic conditions",
                 "enabling hands-free steering on all roads"
             ],
-            correctAnswer: 2, // Index of the correct answer
+            correctAnswer: 2,
             explanation: "Unlike standard cruise control, which maintains a fixed speed, ACC monitors the traffic ahead using radar and cameras. It slows down or speeds up the vehicle to maintain a safe following distance.",
             videoExplanation: "data/acc.mp4"
         },
@@ -73,6 +73,9 @@
         }
     ];
 
+    // Server configuration
+    const SERVER_URL = 'https://quiz-game-ilia.marcus7i.net';
+
     // DOM elements
     const questionNumber = document.getElementById('question-number');
     const totalQuestions = document.getElementById('total-questions');
@@ -82,14 +85,18 @@
     const answersList = document.getElementById('answers-list');
     const submitButton = document.getElementById('submit-btn');
     const nextButton = document.getElementById('next-btn');
-    const restartButton = document.getElementById('restart-btn');
     const feedbackSection = document.getElementById('answer-feedback');
     const explanationText = document.getElementById('answer-explanation');
     const videoSection = document.getElementById('video-explanation');
-    const videoFrame = document.getElementById('explanation-video');
+    const videoElement = document.getElementById('explanation-video');
     const quizResults = document.getElementById('quiz-results');
     const scoreDisplay = document.getElementById('score');
     const maxScoreDisplay = document.getElementById('max-score');
+    const nicknameInput = document.getElementById('nickname');
+    const saveScoreButton = document.getElementById('save-score-btn');
+    const leaderboard = document.getElementById('leaderboard');
+    const leaderboardBody = document.getElementById('leaderboard-body');
+    const playAgainButton = document.getElementById('play-again-btn');
 
     // Quiz state
     let currentQuestionIndex = 0;
@@ -98,25 +105,82 @@
 
     // Initialize quiz
     function initQuiz() {
-        // Reset quiz state
         currentQuestionIndex = 0;
         score = 0;
         answered = false;
 
-        // Update total questions display
         totalQuestions.textContent = quizData.length;
         maxScoreDisplay.textContent = quizData.length;
 
-        // Hide results and show first question
         quizResults.classList.add('hidden');
+        leaderboard.classList.add('hidden');
         loadQuestion();
     }
 
-    // Load current question
+    async function loadLeaderboard() {
+        try {
+            const response = await fetch(`${SERVER_URL}/leaderboard`);
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const scores = await response.json();
+
+            leaderboardBody.innerHTML = '';
+            scores.sort((a, b) => b.score - a.score).forEach((entry, index) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+          <td>${index + 1}</td>
+          <td>${entry.name}</td>
+          <td>${entry.score}/${quizData.length}</td>
+          <td>${new Date().toLocaleDateString()}</td>
+        `;
+                leaderboardBody.appendChild(row);
+            });
+        } catch (error) {
+            console.error('Error loading leaderboard:', error);
+            alert('Failed to load leaderboard. Please try again later.');
+        }
+    }
+
+    async function saveScore() {
+        const nickname = nicknameInput.value.trim();
+        if (!nickname) {
+            alert('Please enter a nickname!');
+            return;
+        }
+
+        const formData = new FormData();
+        formData.append('name', nickname);
+        formData.append('score', score.toString());
+
+        try {
+            const response = await fetch(`${SERVER_URL}/leaderboard`, {
+                method: 'POST',
+                body: formData
+            });
+
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            const result = await response.json();
+
+            if (result.status === 'success') {
+                await loadLeaderboard();
+                quizResults.classList.add('hidden');
+                leaderboard.classList.remove('hidden');
+            } else {
+                alert(result.message || 'Error saving score. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error saving score:', error);
+            alert('Failed to save score. Please try again later.');
+        }
+    }
+
     function loadQuestion() {
         const currentQuestion = quizData[currentQuestionIndex];
 
-        // Reset state for new question
         answered = false;
         feedbackSection.classList.add('hidden');
         videoSection.classList.add('hidden');
@@ -124,21 +188,19 @@
         submitButton.classList.remove('hidden');
         submitButton.disabled = true;
 
-        // Stop any playing videos
-        videoFrame.src = '';
+        if (videoElement.src) {
+            videoElement.pause();
+            videoElement.removeAttribute('src');
+            videoElement.load();
+        }
 
-        // Update question number
         questionNumber.textContent = currentQuestionIndex + 1;
-
-        // Update question content
         questionImg.src = currentQuestion.image;
         questionText.textContent = currentQuestion.question;
         questionDescription.textContent = currentQuestion.description;
 
-        // Clear previous answer options
         answersList.innerHTML = '';
 
-        // Create new answer options
         currentQuestion.options.forEach((option, index) => {
             const optionDiv = document.createElement('div');
             optionDiv.className = 'answer-option';
@@ -158,7 +220,6 @@
             answersList.appendChild(optionDiv);
         });
 
-        // Enable submit button when an answer is selected
         document.querySelectorAll('input[name="answer"]').forEach(radio => {
             radio.addEventListener('change', function() {
                 submitButton.disabled = false;
@@ -166,27 +227,21 @@
         });
     }
 
-    // Handle submit button click
     submitButton.addEventListener('click', function() {
         if (answered) return;
 
-        // Get selected answer
         const selectedAnswer = document.querySelector('input[name="answer"]:checked');
-
         if (!selectedAnswer) return;
 
         const selectedValue = parseInt(selectedAnswer.value);
         const currentQuestion = quizData[currentQuestionIndex];
 
-        // Mark as answered
         answered = true;
 
-        // Check if answer is correct
         if (selectedValue === currentQuestion.correctAnswer) {
             score++;
         }
 
-        // Show all answer options with appropriate styling
         const answerOptions = document.querySelectorAll('.answer-option');
         answerOptions.forEach((option, index) => {
             if (index === currentQuestion.correctAnswer) {
@@ -196,44 +251,34 @@
             }
         });
 
-        // Show explanation
         explanationText.textContent = currentQuestion.explanation;
         feedbackSection.classList.remove('hidden');
 
-        // Show video explanation if available
         if (currentQuestion.videoExplanation) {
-            videoFrame.src = currentQuestion.videoExplanation;
+            videoElement.src = currentQuestion.videoExplanation;
             videoSection.classList.remove('hidden');
         } else {
             videoSection.classList.add('hidden');
         }
 
-        // Disable radio buttons after submission
         document.querySelectorAll('input[name="answer"]').forEach(radio => {
             radio.disabled = true;
         });
 
-        // Hide submit button and show next button
         submitButton.classList.add('hidden');
 
-        // Show next button if there are more questions, otherwise show results
         if (currentQuestionIndex < quizData.length - 1) {
             nextButton.classList.remove('hidden');
         } else {
-            // Update score display
             scoreDisplay.textContent = score;
-
-
-
-            // Show quiz results after a short delay
             setTimeout(() => {
                 feedbackSection.classList.add('hidden');
                 quizResults.classList.remove('hidden');
-            }, 20000);
+                vif
+            }, 14000);
         }
     });
 
-    // Handle next button click
     nextButton.addEventListener('click', function() {
         if (currentQuestionIndex < quizData.length - 1) {
             currentQuestionIndex++;
@@ -241,8 +286,9 @@
         }
     });
 
-    // Handle restart button click
-    restartButton.addEventListener('click', function() {
+    saveScoreButton.addEventListener('click', saveScore);
+
+    playAgainButton.addEventListener('click', function() {
         initQuiz();
     });
 

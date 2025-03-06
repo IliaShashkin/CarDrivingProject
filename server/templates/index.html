@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leaderboard</title>
+
     <style>
         :root {
             --bg-color: #1a1a1a;
@@ -59,32 +60,32 @@
         }
 
         .score-form {
-                background-color: var(--input-bg);
-                padding: 15px;
-                border-radius: 5px;
-                margin-bottom: 20px;
-            }
-            .score-form input {
-                background-color: var(--bg-color);
-                border: 1px solid var(--primary-color);
-                color: var(--text-color);
-                padding: 8px;
-                margin: 5px;
-                border-radius: 4px;
-            }
-            .score-form button {
-                background-color: var(--primary-color);
-                color: var(--text-color);
-                border: none;
-                padding: 8px 15px;
-                border-radius: 4px;
-                cursor: pointer;
-            }
-            .score-form button:hover {
-                background-color: var(--hover-color);
-            }
-        </style>
+            background-color: var(--input-bg);
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .score-form input {
+            background-color: var(--bg-color);
+            border: 1px solid var(--primary-color);
+            color: var(--text-color);
+            padding: 8px;
+            margin: 5px;
+            border-radius: 4px;
+        }
+        .score-form button {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .score-form button:hover {
+            background-color: var(--hover-color);
+        }
     </style>
+
 </head>
 <body>
     <div class="container">
@@ -139,7 +140,7 @@
             const name = document.getElementById('name').value;
             const score = parseInt(document.getElementById('score').value);
             
-            if (!name || !score) {
+            if (!name ) {
                 alert('Please enter both name and score');
                 return;
             }
