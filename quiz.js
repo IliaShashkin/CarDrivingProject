@@ -60,7 +60,7 @@
         {
             question: "What is the key feature in Audi's Traffic Jam Pilot?",
             description: "",
-            image: "data/error.png",
+            image: "#",
             options: [
                 "LiDAR scanners",
                 "Embedded cameras",
