@@ -60,7 +60,7 @@
         {
             question: "What is the key feature in Audi's Traffic Jam Pilot?",
             description: "",
-            image: "#",
+            image: "data/audi-traffic-jam-pilot.jpg",
             options: [
                 "LiDAR scanners",
                 "Embedded cameras",
@@ -69,7 +69,21 @@
             ],
             correctAnswer: 0,
             explanation: "Audi was the first car manufacturer to include a LiDAR system for it's Traffic Jam Pilot.",
-            videoExplanation: "data/heavyRainConditions.mp4"
+            videoExplanation: "data/audi-traffic-jam-pilot.jpg"
+        },
+        {
+            question: "What is one major advantage Tesla Autopilot 2.0 has over Level 2 LKA?",
+            description: "Tesla Autopilot had some self-learning capabilities. What could that mean?",
+            image: "data/maxresdefault (2.jpg",
+            options: [
+                "It eliminates the need for human drivers",
+                "It only works on highways and cannot adapt to city driving",
+                "It does not require radar or cameras to function",
+                "It has more advanced machine learning and continuous software updates"
+            ],
+            correctAnswer: 3,
+            explanation: "",
+            videoExplanation: "data/road.mp4"
         }
     ];
 
