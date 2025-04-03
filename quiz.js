@@ -69,7 +69,7 @@
             ],
             correctAnswer: 0,
             explanation: "Audi was the first car manufacturer to include a LiDAR system for it's Traffic Jam Pilot.",
-            videoExplanation: "data/audi-traffic-jam-pilot.jpg"
+            videoExplanation: "data/AudiLiDar.mp4"
         },
         {
             question: "What is one major advantage Tesla Autopilot 2.0 has over Level 2 LKA?",
