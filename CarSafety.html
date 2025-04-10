@@ -56,171 +56,21 @@
     <p>
         Discover about how FSD Systems mitigate and help with general Car Safety
     </p>
-    <a href="#history" class="scroll-btn">Learn More</a>
+    <a href="#key-safety" class="scroll-btn">Learn More</a>
 </div>
 
-
-
 <div class="content">
-    <h2 id="history">What are Self-Driving Systems?</h2>
-    <p>
-        <b>Autonomous driving</b> is a feature of offered by certain automotive companies like Tesla, Audi, Wayamo etc. <br>
-        This feature allows the driver to use autonomous driving/assistance to help drive their vehicles.
-        First instance of autonomous assistance was in 1948, where <a href="firstFsd.html" class="grey-button">Ralph Teetor</a>
-        invented the first cruise-control system.<br>
-
-    </p>
-    <img
-            src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRuLJyY-IcYYHBKH8d1OmfBuOBdmWpspscQtAHO5VhuhXHvf5lhLy8EIHxu1cQ0GHymR8cSdMKx-K5VBW2MW14sRQ"
-            alt="Ralph Teetor"
-            class="responsive-image"
-            title="Ralph Teetor"
-    >
-    <br>
-    <p>
-        <br>
-        However, major progress began in the 1980's where, via the funding from both the US government and German government,
-        the first semi-autonomous driving system was developed.<br>
-        Through later developments in the early 2000's and 2015, the first autonomous driving system was developed.<br>
-        From 2017 onwards, companies like Waymo developed privately researched autonomous driving systems.
-        And then, further advancements made by Tesla in the 2020's, Full Self Driving (FDS) systems were now capable
-        of reliably driving without human input. <br>
-    </p>
-    <h2>SAE Levels of Driving Automation</h2>
-    <p>The Society of Automotive Engineers (SAE) defines autonomous driving levels through a standard called <strong>J3016</strong>, which classifies autonomous vehicle capabilities into <strong>five levels</strong>, ranging from <strong>Level 0</strong> (no automation) to <strong>Level 4(FSD)</strong> (full automation). These levels help to clarify the degree of automation in a vehicle and the amount of human intervention required. Here’s a breakdown of how the SAE defines these levels:</p>
-
-</div>
-
-<section id="timeline" >
-
-    <div class="tl-item" onclick="window.location.href='Level1.html';" style="cursor: pointer;">
-
-        <div class="tl-bg" style="background-image: url(data/scale_1200.jpg)"></div>
-
-        <div class="tl-year">
-            <p class="f2 heading--sanSerif">Level 1</p>
+    <h2 id="key-safety">Key Safety Mechanisms in FSD Systems</h2>
+    <div class="tip-card-container">
+        <div class="tip-card">
+            <b>Sensors</b>: Most cars with <a href="Level2.html" target="_blank">Level 2 Automation</a>
+            have <b>Cameras, LiDAR and Radar</b> sensors that provide a 360° awareness.
         </div>
-
-        <div class="tl-content">
-            <h1>Driver Assistance</h1>
-            <p>Adaptive Cruise Control (ACC).
-                The system controls either acceleration/braking
-                (but not both simultaneously).
-                The driver must always keep their
-                hands on the wheel
-                and monitor the road.</p>
+        <div class="tip-card">
+            <b>AI</b>: Machine learning predicts risky behaviours (e.g. sudden braking, jaywalking)
+            as seen in <a href="fsd.html" target="_blank">Full Self Driving cars.</a>
         </div>
-
     </div>
-
-    <div class="tl-item" onclick="window.location.href='Level2.html';" style="cursor: pointer;">
-
-        <div  class="tl-bg" style="background-image: url(data/tesla2.jpg)"></div>
-
-        <div class="tl-year">
-            <p class="f2 heading--sanSerif">Level 2</p>
-        </div>
-
-        <div class="tl-content">
-            <h1 class="f3 text--accent ttu">Partial Automation</h1>
-            <p>Example: Tesla Autopilot (2.0),
-                Lane Keeping Assist (LKA) systems.
-                The vehicle can simultaneously manage
-                steering and acceleration/braking.
-                The driver must remain ready
-                to take control at any moment.
-            </p>
-        </div>
-
-    </div>
-
-    <div class="tl-item" onclick="window.location.href='Level3.html';" style="cursor: pointer;">
-
-        <div class="tl-bg" style="background-image: url(data/tesla3.png)"></div>
-
-        <div class="tl-year">
-            <p class="f2 heading--sanSerif">Level 3</p>
-        </div>
-
-        <div class="tl-content">
-            <h1 class="f3 text--accent ttu">Conditional Automation</h1>
-            <p>Example: Audi A8 with Traffic Jam Pilot,
-                Tesla Autopilot (3.0),
-                The system can take full control in specific
-                conditions (e.g., in traffic jams).
-                The driver can be distracted but must be
-                ready to intervene if prompted by the system.
-            </p>
-        </div>
-
-    </div>
-
-    <div class="tl-item" onclick="window.location.href='fsd.html';" style="cursor: pointer;">
-
-        <div class="tl-bg" style="background-image: url(data/YandexTaxi.jpeg)"></div>
-
-        <div class="tl-year">
-            <p class="f2 heading--sanSerif">FSD</p>
-        </div>
-
-        <div class="tl-content">
-            <h1 class="f3 text--accent ttu">High Automation</h1>
-            <p>
-                Example: Robotaxi prototypes (Waymo,
-                Yandex,advanced Tesla FSD Beta versions).
-                The vehicle can fully drive itself in specific
-                geofenced areas and conditions without
-                driver intervention. The driver can completely relax,
-                but the system is limited to predefined scenarios.
-            </p>
-        </div>
-
-    </div>
-</section>
-<div class="content">
-    <h2>Determining the Levels:</h2>
-    <p>The SAE levels are based on two main factors:</p>
-    <ul>
-        <li><strong>Driving Task Automation:</strong> How much control the vehicle has over driving functions (steering, acceleration, braking, etc.).</li>
-        <li><strong>Driver's Role:</strong> The extent to which the driver must remain engaged, monitor the environment, and be ready to intervene.</li>
-    </ul>
-    <p>As the level increases, the vehicle takes on more of the driving tasks, and the driver’s involvement decreases, with <strong>Level 4</strong> representing complete autonomy where no human intervention is needed at all.</p>
-    <br>
-
-    <br>
-
-    <h2>Pros and Cons</h2>
-    <h3>Pros</h3>
-    <p><b>1. Enhanced Safety:</b></p>
-    <ul>
-        <li>Reduced Human Error: Automated Systems reduce human error with driving such as fatigue</li>
-        <li>Advanced Senses: Sensors and advance algorithms allow pre-emptive detection of hazardous situations and course correct</li>
-    </ul>
-    <p><b>2. Enhanced Convenience</b></p>
-    <ul>
-        <li>Reduces stress while driving, especially in congested areas</li>
-        <li>Allows occupants to do other tasks while travelling</li>
-    </ul>
-    <p><b>3. Accessibility</b></p>
-    <ul>
-        <li>Allows people who cant drive, for example people with disabilities or elderly people, to drive safely</li>
-    </ul>
-    <h3>Cons</h3>
-    <p><b>1. Technical difficulties</b></p>
-    <ul>
-        <li>Current FSD systems struggle in complex or unpredictable driving conditions, such as heavy rain, snow, or poorly marked roads.</li>
-        <li>Limitations in AI’s ability to handle nuanced human decisions (e.g., ethical dilemmas or interpreting subtle gestures)</li>
-    </ul>
-    <p><b>2. Operating Costs</b></p>
-    <ul>
-        <li>Maintenance costs and operating costs are difficult to maintain.</li>
-        <li>Costs for AI development and Data centres for AI make it hard to implement FSD systems</li>
-    </ul>
-    <p><b>3. Legal Issues and Public trust</b></p>
-    <ul>
-        <li>Many core modules and systems of FSD systems are still debated in courts for their usability.</li>
-        <li>Public opinion is still against the idea of having autonomous-driving cars</li>
-    </ul>
 </div>
 
 <footer class="footer">
