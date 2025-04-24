@@ -705,7 +705,7 @@ textarea {
 }
 
 .tip-card {
-    background-color: #222;
+    background-color: #1e1e1e;
     color: white;
     padding: 15px 20px;
     border-radius: 10px;
@@ -713,11 +713,22 @@ textarea {
     box-shadow: 0 4px 10px rgba(0, 255, 127, 0.2);
     border: 1px solid mediumspringgreen;
     transition: transform 0.3s, box-shadow 0.3s;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.4;
 }
 
 .tip-card:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 15px rgba(0, 255, 127, 0.5);
+}
+
+.inner-card {
+    margin-top: 10px;
+    background-color: #2a2a2a;
+    border-left: 4px solid mediumspringgreen;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: lightgreen;
+    font-style: italic;
 }
