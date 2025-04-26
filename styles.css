@@ -702,6 +702,7 @@ textarea {
     justify-content: center;
     gap: 15px;
     margin-top: 20px;
+    padding-bottom: 17px;
 }
 
 .tip-card {
