@@ -2,75 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Car Safety with FSD Systems</title>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" defer crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Your Styles -->
     <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
-<div class="glow-overlay-main"></div>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="
-    background-color: #343a40;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-">
-    <a class="navbar-brand" href="#" bis_skin_checked="1" style="
-    padding-left: 10px;
-">Menu</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
 
+<div class="glow-overlay-main"></div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding: 10px; position: fixed; width: 100%; top: 0; z-index: 1000;">
+    <a class="navbar-brand" href="#" style="padding-left: 10px;">Menu</a>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">Home <span class="sr-only"></span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="project-description.html">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="firstFsd.html">First FSD </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="blog.html">News</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="timeline.html">Timeline</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="quiz.html">Quiz</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="CarSafety.html">Traffic Safety</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="project-description.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="firstFsd.html">First FSD</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">News</a></li>
+            <li class="nav-item"><a class="nav-link" href="timeline.html">Timeline</a></li>
+            <li class="nav-item"><a class="nav-link" href="quiz.html">Quiz</a></li>
+            <li class="nav-item"><a class="nav-link" href="CarSafety.html">Traffic Safety</a></li>
         </ul>
     </div>
-    <button id="theme-toggle">🌓</button>
-
 </nav>
 
-
-<div class="intro-section">
+<!-- Intro Section -->
+<div class="intro-section" style="margin-top: 70px;">
     <video autoplay muted loop class="background-video">
         <source src="data/traffic.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
     <div class="overlay"></div>
     <h1>Welcome to Traffic Safety with FSD Systems</h1>
-    <p>
-        Discover about how FSD Systems mitigate and help with general Car Safety
-    </p>
+    <p>Discover how FSD Systems mitigate and improve general car safety.</p>
     <a href="#key-safety" class="scroll-btn">Learn More</a>
 </div>
 
-<div class="content">
-    <h2 id="key-safety">How FSD Systems Improve Traffic Safety</h2>
-    <div class="tip-card-container">
+<!-- Main Content -->
+<div class="content container">
+    <h2 id="key-safety" class="text-center mb-5">How FSD Systems Improve Traffic Safety</h2>
+    <div class="tip-card-container d-flex flex-wrap justify-content-center">
+
+        <!-- Card 1 -->
         <div class="tip-card">
             <img src="data/brakeimg-card.jpg" alt="Emergency Braking">
             <div class="tip-card-content">
@@ -78,40 +56,55 @@
                 <p class="short-text">Applies brakes automatically if a crash is detected.</p>
                 <button class="learn-more-btn">Learn More</button>
                 <div class="inner-card">
-                    Emergency braking activates faster than a human reaction time, reducing the chance of collision dramatically.
+                    <p>Activates faster than human reaction time, reducing collision risk drastically by applying full brakes automatically.</p>
                 </div>
             </div>
         </div>
+
+        <!-- Card 2 -->
+        <div class="tip-card">
+            <img src="data/blindspotimg-card.jpg" alt="Blind Spot Monitoring">
+            <div class="tip-card-content">
+                <h3>Blind Spot Monitoring</h3>
+                <p class="short-text">Warns about vehicles in adjacent lanes outside mirrors.</p>
+                <button class="learn-more-btn">Learn More</button>
+                <div class="inner-card">
+                    <p>Helps avoid collisions by alerting drivers when cars approach their blind spots and aren't visible.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="tip-card">
+            <img src="data/laneassistimg-card.jpg" alt="Lane Keeping Assistant">
+            <div class="tip-card-content">
+                <h3>Lane Keeping Assistant</h3>
+                <p class="short-text">Keeps your car centered automatically within the lane.</p>
+                <button class="learn-more-btn">Learn More</button>
+                <div class="inner-card">
+                    <p>Detects unintentional drifting and gently corrects steering to maintain lane discipline.</p>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 
-<footer class="footer">
-    <p>&copy; 2024 Self-Drive Systems</p>
-    <p>Found a bug? <button id="reportBtn">Report an issue!</button></p>
-    <div id="reportModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Report an Issue</h2>
-            <textarea id="reportText" placeholder="Describe the issue..."></textarea>
-            <button id="submitReport">Submit</button>
-        </div>
-    </div>
+<!-- Footer -->
+<footer class="footer text-center mt-5">
+    <p>&copy; 2024 Self-Drive Systems. All rights reserved.</p>
 </footer>
-<script src="reports.js"></script>
-<script src="script.js"></script>
+
+<!-- JavaScript for Cards -->
 <script>
     document.querySelectorAll('.learn-more-btn').forEach(button => {
         button.addEventListener('click', function(e) {
             e.stopPropagation();
-            const inner = this.nextElementSibling;
-            if (inner.style.display === "block") {
-                inner.style.display = "none";
-            } else {
-                inner.style.display = "block";
-            }
+            const card = this.closest('.tip-card');
+            card.classList.toggle('expanded');
         });
     });
-
 </script>
+
 </body>
 </html>
