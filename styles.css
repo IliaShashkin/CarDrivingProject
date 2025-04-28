@@ -700,43 +700,58 @@ textarea {
     color: white;
 }
 
-.tip-card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-    padding-bottom: 17px;
-}
-
 .tip-card {
-    background-color: #1e1e1e;
-    color: white;
-    padding: 15px 20px;
+    background-color: #1f1f1f;
     border-radius: 10px;
-    width: 280px;
+    overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 255, 127, 0.2);
-    border: 1px solid mediumspringgreen;
-    transition: transform 0.3s, box-shadow 0.3s;
-    font-size: 15px;
-    line-height: 1.4;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+    margin: 20px;
+    cursor: pointer;
+    position: relative;
 }
 
-.tip-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 255, 127, 0.5);
+.tip-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.tip-card-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.tip-card-content h3 {
+    margin-top: 10px;
+    font-size: 1.4rem;
+    color: mediumspringgreen;
+}
+
+.tip-card-content .short-text {
+    font-size: 0.95rem;
+    margin: 10px 0;
+}
+
+.learn-more-btn {
+    background-color: mediumspringgreen;
+    color: black;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
 .inner-card {
-    margin-top: 10px;
-    background-color: #2a2a2a;
-    border-left: 4px solid mediumspringgreen;
-    padding: 10px;
-    border-radius: 8px;
-    font-size: 14px;
+    margin-top: 15px;
+    font-size: 0.9rem;
     color: lightgreen;
-    font-style: italic;
+    display: none;
 }
+
 
 
 /* Reset and basic styles */

@@ -72,40 +72,15 @@
     <h2 id="key-safety">How FSD Systems Improve Traffic Safety</h2>
     <div class="tip-card-container">
         <div class="tip-card">
-            FSD systems reduce human error, which accounts for 90% of traffic accidents.
-            <div class="inner-card">Example: Autopilot can react faster to sudden stops than most drivers.</div>
-        </div>
-        <div class="tip-card">
-            Adaptive Cruise Control (ACC) maintains a safe following distance automatically.
-            <div class="inner-card">This reduces the risk of rear-end collisions in stop-and-go traffic.</div>
-        </div>
-        <div class="tip-card">
-            Lane Keeping Assist prevents unintentional lane drifting.
-            <div class="inner-card">This helps avoid sideswipes and head-on collisions on undivided roads.</div>
-        </div>
-        <div class="tip-card">
-            Autopilot features reduce driver fatigue by handling monotonous tasks.
-            <div class="inner-card">Long-distance highway driving becomes safer with less mental strain.</div>
-        </div>
-        <div class="tip-card">
-            Full Self-Driving systems maintain consistent speed and spacing.
-            <div class="inner-card">Reduces aggressive driving and helps with smoother traffic flow.</div>
-        </div>
-        <div class="tip-card">
-            360-degree sensors detect hazards the driver may miss.
-            <div class="inner-card">Helps identify vehicles in blind spots or sudden obstacles like pedestrians.</div>
-        </div>
-        <div class="tip-card">
-            Emergency braking systems prevent crashes when a vehicle ahead stops suddenly.
-            <div class="inner-card">They activate faster than a human foot can reach the pedal.</div>
-        </div>
-        <div class="tip-card">
-            FSD features improve safety in poor visibility conditions.
-            <div class="inner-card">Radar and LiDAR see better through fog, rain, and darkness.</div>
-        </div>
-        <div class="tip-card">
-            Real-time data and map updates help avoid hazards and traffic.
-            <div class="inner-card">Dynamic rerouting prevents pileups and congestion zones.</div>
+            <img src="data/brakeimg-card.jpg" alt="Emergency Braking">
+            <div class="tip-card-content">
+                <h3>Emergency Braking</h3>
+                <p class="short-text">Applies brakes automatically if a crash is detected.</p>
+                <button class="learn-more-btn">Learn More</button>
+                <div class="inner-card">
+                    Emergency braking activates faster than a human reaction time, reducing the chance of collision dramatically.
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -124,5 +99,19 @@
 </footer>
 <script src="reports.js"></script>
 <script src="script.js"></script>
+<script>
+    document.querySelectorAll('.learn-more-btn').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const inner = this.nextElementSibling;
+            if (inner.style.display === "block") {
+                inner.style.display = "none";
+            } else {
+                inner.style.display = "block";
+            }
+        });
+    });
+
+</script>
 </body>
 </html>
