@@ -10,7 +10,14 @@
 </head>
 <body>
 <div class="glow-overlay-main"></div>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="
+    background-color: #343a40;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+">
     <a class="navbar-brand" href="#" bis_skin_checked="1" style="
     padding-left: 10px;
 ">Menu</a>
@@ -39,10 +46,12 @@
                 <a class="nav-link" href="quiz.html">Quiz</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="CarSafety.html">Traffic Safety</a>
+                <a class="nav-link" href="CarSafety.html">Traffic Safety</a>
             </li>
         </ul>
     </div>
+    <button id="theme-toggle">🌓</button>
+
 </nav>
 
 

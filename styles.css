@@ -793,12 +793,13 @@ body.light-mode .grey-button {
 }
 
 body.light-mode table th {
-    background-color: #f5f5f5;
+    background-color: #8a8a8a;
     color: #1b1b1b ;
 }
 
 body.light-mode table td {
     border-color: #1b1b1b ;
+    color: #1b1b1b ;
 }
 body.light-mode .content h2,
 body.light-mode .content h3,
