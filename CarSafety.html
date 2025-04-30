@@ -56,14 +56,17 @@
                 <p class="short-text">Applies brakes automatically if a crash is detected.</p>
                 <button class="learn-more-btn">Learn More</button>
                 <div class="inner-card">
-                    <p>Activates faster than human reaction time, reducing collision risk drastically by applying full brakes automatically.</p>
+                    <ul>
+                        <li>Has faster reaction time than Humans</li>
+                        <li>Can apply emergency braking faster than Humans</li>
+                    </ul>
                 </div>
             </div>
         </div>
 
         <!-- Card 2 -->
         <div class="tip-card">
-            <img src="data/blindspotimg-card.jpg" alt="Blind Spot Monitoring">
+            <img src="data/blindspot-card.jpg" alt="Blind Spot Monitoring">
             <div class="tip-card-content">
                 <h3>Blind Spot Monitoring</h3>
                 <p class="short-text">Warns about vehicles in adjacent lanes outside mirrors.</p>
@@ -76,7 +79,7 @@
 
         <!-- Card 3 -->
         <div class="tip-card">
-            <img src="data/laneassistimg-card.jpg" alt="Lane Keeping Assistant">
+            <img src="data/tesla2.jpg" alt="Lane Keeping Assistant">
             <div class="tip-card-content">
                 <h3>Lane Keeping Assistant</h3>
                 <p class="short-text">Keeps your car centered automatically within the lane.</p>
@@ -87,14 +90,72 @@
             </div>
         </div>
 
+        <!-- Card 4: Traffic Sign Recognition -->
+        <div class="tip-card">
+            <img src="data/trafficlight-card.jpg" alt="Traffic Sign Recognition">
+            <div class="tip-card-content">
+                <h3>Traffic Sign Recognition</h3>
+                <p class="short-text">Reads road signs in real-time.</p>
+                <button class="learn-more-btn">Learn More</button>
+                <div class="inner-card">
+                    <ul>
+                        <li>Detects speed limits, stop signs, and yield warnings.</li>
+                        <li>Helps maintain speed compliance.</li>
+                        <li>Improves safety by reading signs even when GPS fails.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 5: Driver Monitoring System -->
+        <div class="tip-card">
+            <img src="data/drivermoniter-card.jpg" alt="Driver Monitoring System">
+            <div class="tip-card-content">
+                <h3>Driver Monitoring</h3>
+                <p class="short-text">Watches driver attention and alertness.</p>
+                <button class="learn-more-btn">Learn More</button>
+                <div class="inner-card">
+                    <ul>
+                        <li>Tracks eye movement and head direction.</li>
+                        <li>Warns driver if drowsy or distracted.</li>
+                        <li>Can slow or stop the car if unresponsive.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 6: Pedestrian Detection -->
+        <div class="tip-card">
+            <img src="data/pedestrian-card.jpg" alt="Pedestrian Detection">
+            <div class="tip-card-content">
+                <h3>Pedestrian Detection</h3>
+                <p class="short-text">Detects and avoids pedestrians automatically.</p>
+                <button class="learn-more-btn">Learn More</button>
+                <div class="inner-card">
+                    <ul>
+                        <li>Uses cameras and radar to detect pedestrians.</li>
+                        <li>Warns or stops automatically to avoid them.</li>
+                        <li>Works in crosswalks and parking lots.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
 <!-- Footer -->
-<footer class="footer text-center mt-5">
-    <p>&copy; 2024 Self-Drive Systems. All rights reserved.</p>
+<footer class="footer">
+    <p>&copy; 2024 Self-Drive Systems</p>
+    <p>Found a bug? <button id="reportBtn">Report an issue!</button></p>
+    <div id="reportModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Report an Issue</h2>
+            <textarea id="reportText" placeholder="Describe the issue..."></textarea>
+            <button id="submitReport">Submit</button>
+        </div>
+    </div>
 </footer>
-
 <!-- JavaScript for Cards -->
 <script>
     document.querySelectorAll('.learn-more-btn').forEach(button => {

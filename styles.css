@@ -702,9 +702,12 @@ textarea {
 
 .tip-card-container {
     display: flex;
-    flex-wrap: wrap;
     gap: 20px;
-    justify-content: center;
+    overflow-x: auto;
+    padding: 20px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    height: 550px;
 }
 
 .tip-card {
@@ -720,6 +723,27 @@ textarea {
     display: flex;
     flex-direction: column;
     height: 100%;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+}
+
+.tip-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 255, 127, 0.2);
+    transition: width 0.5s ease, transform 0.5s ease;
+    transform: scale(1.05);
+}
+
+.tip-card-container::-webkit-scrollbar {
+    height: 10px;
+}
+
+.tip-card-container::-webkit-scrollbar-thumb {
+    background: mediumspringgreen;
+    border-radius: 5px;
+}
+
+.tip-card-container::-webkit-scrollbar-track {
+    background: #1f1f1f;
 }
 
 .tip-card img {
@@ -774,6 +798,24 @@ textarea {
     white-space: normal;
     margin-top: 15px;
     color: lightgreen;
+}
+.inner-card ul {
+    padding-left: 20px;
+    margin: 0;
+    list-style-type: circle;
+    color: azure;
+    font: 20px "JetBrains Mono", monospace;
+}
+
+.inner-card li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.inner-card li::marker{
+    content: "➤ ";
+    color:aquamarine;
+    font-size: 1.2rem;
 }
 
 .tip-card.expanded {
