@@ -60,6 +60,8 @@
 <div class="content">
     <h2 id="key-safety">How FSD Systems Improve Traffic Safety</h2>
 </div>
+<div class="tip-card-overlay" id="overlay" onclick="collapseCard()"></div>
+
     <div class="tip-card-container">
         <div class="tip-card">
             <img src="data/brakeimg-card.jpg" alt="Emergency Braking">
@@ -280,18 +282,23 @@
 <script src="reports.js"></script>
 <script src="script.js"></script>
 <script>
+    const overlay = document.getElementById('overlay');
+
     document.querySelectorAll('.learn-more-btn').forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.stopPropagation();
-            const inner = this.nextElementSibling;
-            if (inner.style.display === "block") {
-                inner.style.display = "none";
-            } else {
-                inner.style.display = "block";
-            }
+        button.addEventListener('click', (e) => {
+            const card = e.target.closest('.tip-card');
+            card.classList.add('expanded');
+            overlay.style.display = 'block';
         });
     });
 
+    function collapseCard() {
+        document.querySelectorAll('.tip-card.expanded').forEach(card => {
+            card.classList.remove('expanded');
+        });
+        overlay.style.display = 'none';
+    }
 </script>
+
 </body>
 </html>
