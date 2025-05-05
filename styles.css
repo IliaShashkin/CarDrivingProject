@@ -700,18 +700,18 @@ textarea {
     resize: none;
     color: white;
 }
-
+/* Tip Card section */
 
 .tip-card-container {
     display: flex;
-    gap: 20px;
     overflow-x: auto;
+    gap: 20px;
     padding: 20px;
-
-    height: 550px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Firefox */
 }
 
-/* Tip Card section */
+
 
 .tip-card {
     background-color: #1f1f1f;
@@ -720,12 +720,12 @@ textarea {
     box-shadow: 0 4px 10px rgba(0, 255, 127, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 300px;
+    height: 500px;
     margin: 20px;
     cursor: pointer;
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 100%;
     flex: 0 0 auto;
     scroll-snap-align: start;
 }
@@ -806,6 +806,46 @@ textarea {
     color:aquamarine;
     font-size: 1.2rem;
 }
+
+/* Test section*/
+
+
+
+.tip-card-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+
+
+.tip-card-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+    display: none;
+}
+
+.tip-card.expanded {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.5);
+    z-index: 11;
+    width: 90vw;
+    max-width: 600px;
+    height: auto;
+    box-shadow: 0 0 25px rgba(0, 255, 127, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tip-card.expanded .inner-card {
+    display: block;
+}
+
+
+
 
 
 
