@@ -137,6 +137,7 @@ body {
     font-size: 48px;
     color: #ffffff;
     margin-bottom: 15px;
+    padding-top: 100px;
 }
 
 .content h3 {
@@ -882,7 +883,7 @@ body.light-mode .content li {
 .subtext {
     text-align: center;
     color: #b2b4b6;
-    margin: 10px 20px 30px 20px;
+    padding-bottom: 30px;
 }
 .subtext li, ol, h3, p{
     text-align: center;
@@ -892,6 +893,13 @@ body.light-mode .content li {
 
 .technology-section {
     padding: 40px 20px;
+}
+
+.technology-section h2 {
+    font-size: 48px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .technology-content {
@@ -988,3 +996,17 @@ body.light-mode .content li {
 }
 
 
+#theme-toggle {
+    padding: 10px;
+    background-color: #dd4343;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
