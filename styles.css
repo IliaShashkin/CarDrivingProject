@@ -707,6 +707,7 @@ textarea {
     overflow-x: auto;
     gap: 20px;
     padding: 20px;
+    height: 600px;
     scroll-snap-type: x mandatory;
     scrollbar-width: none; /* Firefox */
 }
@@ -728,6 +729,10 @@ textarea {
     flex-direction: column;
     flex: 0 0 auto;
     scroll-snap-align: start;
+}
+
+.tip-card {
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .tip-card:hover {
@@ -807,8 +812,6 @@ textarea {
     font-size: 1.2rem;
 }
 
-/* Test section*/
-
 
 
 .tip-card-container::-webkit-scrollbar {
@@ -843,9 +846,6 @@ textarea {
 .tip-card.expanded .inner-card {
     display: block;
 }
-
-
-
 
 
 
@@ -953,7 +953,7 @@ body.light-mode .content li {
 .image-placeholder {
     width: 450px;
     height: 300px;
-    background: url('f') center/cover no-repeat;
+    background: url('data') center/cover no-repeat;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
