@@ -700,6 +700,7 @@ textarea {
     color: white;
 }
 
+
 .tip-card-container {
     display: flex;
     gap: 20px;
@@ -710,13 +711,14 @@ textarea {
     height: 550px;
 }
 
+
 .tip-card {
     background-color: #1f1f1f;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 255, 127, 0.2);
-    transition: width 0.5s ease, transform 0.5s ease;
-    width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
     margin: 20px;
     cursor: pointer;
     position: relative;
@@ -755,20 +757,15 @@ textarea {
 .tip-card-content {
     padding: 15px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center vertically */
-    align-items: center;     /* Center horizontally */
-    height: 100%;
 }
 
-.tip-card h3 {
+.tip-card-content h3 {
     margin-top: 10px;
     font-size: 1.4rem;
     color: mediumspringgreen;
 }
 
-.tip-card p.short-text {
+.tip-card-content .short-text {
     font-size: 0.95rem;
     margin: 10px 0;
 }
@@ -782,22 +779,13 @@ textarea {
     font-weight: bold;
     cursor: pointer;
     margin-top: 10px;
-    transition: background-color 0.3s;
 }
 
-.learn-more-btn:hover {
-    background-color: seagreen;
-    color: white;
-}
-
-/* Inner text hidden and sliding */
 .inner-card {
-    transform: translateX(100%);
-    opacity: 0;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    white-space: normal;
     margin-top: 15px;
+    font-size: 0.9rem;
     color: lightgreen;
+    display: none;
 }
 .inner-card ul {
     padding-left: 20px;
@@ -818,14 +806,7 @@ textarea {
     font-size: 1.2rem;
 }
 
-.tip-card.expanded {
-    width: 500px; /* wider when expanded */
-}
 
-.tip-card.expanded .inner-card {
-    transform: translateX(0);
-    opacity: 1;
-}
 
 /* Reset and basic styles */
 * {
@@ -895,3 +876,5 @@ body.light-mode .content p,
 body.light-mode .content li {
     color: #1b1b1b ;
 }
+
+
