@@ -707,11 +707,11 @@ textarea {
     gap: 20px;
     overflow-x: auto;
     padding: 20px;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
+
     height: 550px;
 }
 
+/* Tip Card section */
 
 .tip-card {
     background-color: #1f1f1f;
@@ -944,7 +944,7 @@ body.light-mode .content li {
 
 .tech-item p {
     margin-top: 5px;
-    color: #6c757d;
+    color: #b0b0b0;
     font-size: 18px;
 }
 
